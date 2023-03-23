@@ -1,0 +1,11 @@
+# Verwijder een UUID van een machine wanneer je een sleutel wegneemt van een speler!!'
+
+prefix: "&8[&aMachines&8] &7"
+info: "&7"
+success: "&a"
+error: "&c"
+
+pricing:
+  kleding: 2000
+
+machines: {}

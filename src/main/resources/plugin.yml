@@ -1,0 +1,10 @@
+name: MinecraftMachines
+version: '${project.version}'
+main: dev.jensderuiter.minecraft_machines.MachinesPlugin
+authors: [ jensjeflensje ]
+description: Machines in Minecraft
+depend:
+  - Vault
+commands:
+  machine:
+    usage: /machine <create|addowner|removeowner>
