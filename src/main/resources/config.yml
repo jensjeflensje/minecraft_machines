@@ -1,5 +1,3 @@
-# Verwijder een UUID van een machine wanneer je een sleutel wegneemt van een speler!!'
-
 prefix: "&8[&aMachines&8] &7"
 info: "&7"
 success: "&a"
@@ -7,5 +5,8 @@ error: "&c"
 
 pricing:
   kleding: 2000
+  item: 1000
 
+# De UUIDs die hier staan zijn de spelers voor wie een sleutel is gemaakt.
+# Dat een UUID hier staat, betekent niet dat de speler de sleutel nog steeds heeft.
 machines: {}
