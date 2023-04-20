@@ -29,7 +29,9 @@ jobs:
           cd minecraft_machines/
           mvn clean package
       - name: Extract Maven project version
-        run: echo ::set-output name=version::$(mvn -q -Dexec.executable=echo -Dexec.args='${project.version}' --non-recursive exec:exec)
+        run: |
+          cd minecraft_machines/
+          echo ::set-output name=version::$(mvn -q -Dexec.executable=echo -Dexec.args='${project.version}' --non-recursive exec:exec)
         id: project
       - name: Create Release
         id: create_release
