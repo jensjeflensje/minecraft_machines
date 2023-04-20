@@ -25,7 +25,9 @@ jobs:
         with:
           path: minecraft_machines/
       - name: Build
-        run: mvn clean package
+        run: |
+          cd minecraft_machines/
+          mvn clean package
       - name: Extract Maven project version
         run: echo ::set-output name=version::$(mvn -q -Dexec.executable=echo -Dexec.args='${project.version}' --non-recursive exec:exec)
         id: project
@@ -47,6 +49,6 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: /__w/minecraft_machines/minecraft_machines/target/minecraft_machines-${{ steps.project.outputs.version }}.jar
+          asset_path: /__w/minecraft_machines/minecraft_machines/minecraft_machines/target/minecraft_machines-${{ steps.project.outputs.version }}.jar
           asset_name: MinecraftMachines-${{ steps.project.outputs.version }}.jar
           asset_content_type: application/jar
